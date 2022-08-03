@@ -4,16 +4,18 @@
   --medium-green: #55c57a;
   --dark-green: #28b485;
   --text: #777;
+
+  font-size: 62.5%;
 }
 
 @keyframes moveInLeft {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
     opacity: 0;
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -24,12 +26,12 @@
 
 @keyframes moveInRight {
   0% {
-    transform: translateX(100px);
+    transform: translateX(10rem);
     opacity: 0;
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -40,7 +42,7 @@
 
 @keyframes moveInBottom {
   0% {
-    transform: translateY(30px);
+    transform: translateY(3rem);
     opacity: 0;
   }
 
@@ -50,17 +52,23 @@
   }
 }
 
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
-  padding: 30px;
+  padding: 3rem;
   color: var(--text);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: Lato, sans-serif;
   line-height: 1.7;
 }
@@ -81,12 +89,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .header__text-box {
@@ -98,7 +106,7 @@ body {
 }
 
 .header__heading {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary {
@@ -110,16 +118,16 @@ body {
 .heading-primary__main {
   display: block;
   font-weight: 400;
-  font-size: 60px;
-  letter-spacing: 35px;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 }
 
 .heading-primary__sub {
   display: block;
   font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 17.4px;
+  font-size: 2rem;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
 
@@ -127,20 +135,20 @@ body {
 .btn:visited {
   position: relative;
   display: inline-block;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .btn:hover {
-  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
   transform: translateY(-3px);
 }
 
 .btn:active {
-  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
   transform: translateY(-1px);
 }
 
