@@ -12,6 +12,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "node-sass": "^7.0.1",
     "prettier": "^2.7.1",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
@@ -35,6 +36,7 @@
   },
   "scripts": {
     "stylelint": "stylelint '**/*{.css,.scss}'",
-    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   }
 }
