@@ -5,5 +5,11 @@ module.exports = {
     'stylelint-prettier/recommended',
   ],
   plugins: ['stylelint-order', 'stylelint-scss'],
-  rules: { 'selector-class-pattern': null, 'keyframes-name-pattern': null },
+  rules: {
+    'selector-class-pattern': null,
+    'keyframes-name-pattern': null,
+    /* only for empty *.scss files
+      TODO: remove no-empty-sourse after fill unused *.scss */
+    'no-empty-source': null,
+  },
 };
