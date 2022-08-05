@@ -3,3 +3,21 @@
   padding: 30rem 0;
   background-color: $grey-1-color;
 }
+
+.features {
+  margin-top: -11rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($light-green-color, 80%),
+      rgba($dark-green-color, 80%)
+    ),
+    url('../img/nat-4.jpg');
+  background-position: top;
+  background-size: cover;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
