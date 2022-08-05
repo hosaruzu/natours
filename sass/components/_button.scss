@@ -52,3 +52,28 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 3px;
+    color: $medium-green-color;
+    text-decoration: none;
+    border-bottom: 1px solid $medium-green-color;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.2s ease-out,
+      box-shadow 0.2s ease-out;
+  }
+
+  &:hover {
+    color: $light-color;
+    background-color: $medium-green-color;
+    box-shadow: 0 1rem 2rem rgba($dark-color, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($dark-color, 0.15);
+    transform: translateY(0);
+  }
+}

@@ -19,3 +19,32 @@
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  display: inline-block;
+  color: transparent;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, $light-green-color, $dark-green-color);
+  background-clip: text;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    text-shadow: 0.5rem 1rem 2rem rgba($dark-color, 0.2);
+    transform: skewX(15deg) skewY(7deg) scale(1.1);
+  }
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
