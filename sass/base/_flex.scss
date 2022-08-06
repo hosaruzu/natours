@@ -1,0 +1,31 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin gap-small {
+  gap: 2rem;
+}
+
+@mixin gap-medium {
+  gap: 4rem;
+}
+
+@mixin gap-big {
+  gap: 8rem;
+}

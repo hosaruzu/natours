@@ -7,16 +7,16 @@
 @import 'base/base';
 @import 'base/animations';
 @import 'base/utilities';
+@import 'base/flex';
 
 /* components */
-@import 'components/button';
+@import 'components/buttons';
 @import 'components/heading';
+@import 'components/texts';
 @import 'components/composition';
 @import 'components/feature';
 
 /* layout */
-@import 'layout/flex';
 @import 'layout/header';
-
-/* pages */
-@import 'pages/home';
+@import 'layout/about';
+@import 'layout/features';

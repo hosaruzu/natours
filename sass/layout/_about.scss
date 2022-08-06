@@ -1,0 +1,18 @@
+.about {
+  margin-top: -20vh;
+  padding: 30rem 0;
+  background-color: $grey-1-color;
+
+  &__heading {
+    @include mb-big;
+  }
+
+  &__subheading {
+    @include mb-small;
+  }
+
+  &__content {
+    @include flex-sb;
+    @include gap-medium;
+  }
+}
