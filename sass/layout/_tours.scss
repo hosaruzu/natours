@@ -1,18 +1,15 @@
-.about {
+.tours {
   margin-top: -20vh;
-  padding: 30rem 0;
+  padding: 35rem 0 15rem;
   background-color: $grey-1-color;
 
   &__heading {
     @include mb-big;
   }
 
-  &__subheading {
-    @include mb-small;
-  }
-
   &__content {
     @include flex-center;
     @include gap-medium;
+    @include mb-big;
   }
 }
