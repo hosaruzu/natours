@@ -1,0 +1,58 @@
+.footer {
+  padding: 10rem 0;
+  color: $grey-2-color;
+  background-color: $grey-dark3-color;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mb-medium;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 40%;
+  }
+
+  &__nav,
+  &__copyright {
+    padding-top: 2rem;
+    border-top: 2px solid $grey-dark-color;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: inherit;
+      color: $grey-2-color;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: $grey-dark3-color;
+      transition: color 0.2s ease-out, transform 0.2s ease-out;
+    }
+
+    &:hover,
+    &:active {
+      color: $medium-green-color;
+      box-shadow: 0 1rem 1rem rgba($dark-color, 0.2);
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+}

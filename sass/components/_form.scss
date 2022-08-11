@@ -62,7 +62,8 @@
   }
 
   &__radio-input {
-    display: none;
+    position: absolute;
+    appearance: none;
   }
 
   &__radio-button {
