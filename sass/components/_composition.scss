@@ -1,6 +1,16 @@
 .composition {
   position: relative;
   width: 100%;
+  @include breakpoint(63em) {
+    order: -1;
+    width: 50%;
+    margin-bottom: 35rem;
+  }
+
+  @include breakpoint(38em) {
+    width: 50%;
+    margin-bottom: 20rem;
+  }
 
   &__photo {
     position: absolute;

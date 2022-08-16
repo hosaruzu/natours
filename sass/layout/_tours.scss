@@ -11,5 +11,9 @@
     @include flex-center;
     @include gap-medium;
     @include mb-big;
+
+    @include breakpoint(63em) {
+      flex-wrap: wrap;
+    }
   }
 }

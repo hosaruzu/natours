@@ -18,10 +18,19 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(63em) {
+      flex-wrap: wrap;
+    }
   }
 
   &__text {
     width: 40%;
+
+    @include breakpoint(63em) {
+      width: 100%;
+      margin-top: 2rem;
+    }
   }
 
   &__nav,
@@ -30,10 +39,19 @@
     border-top: 2px solid $grey-dark-color;
   }
 
+  &__nav {
+    border: none;
+  }
+
   &__list {
     display: flex;
     gap: 2rem;
     list-style: none;
+
+    @include breakpoint(63em) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__link {

@@ -9,6 +9,11 @@
     font-size: 6rem;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
+
+    @include breakpoint(38em) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
   }
 
   &__sub {
@@ -17,6 +22,10 @@
     font-size: 2rem;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
+
+    @include breakpoint(38em) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -35,10 +44,17 @@
     text-shadow: 0.5rem 1rem 2rem rgba($dark-color, 0.2);
     transform: skewX(15deg) skewY(7deg) scale(1.1);
   }
+
+  @include breakpoint(63em) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(38em) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-tertiary {
   font-weight: 700;
-  font-size: 1.6rem;
   text-transform: uppercase;
 }

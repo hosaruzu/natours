@@ -29,6 +29,10 @@
     &::placeholder {
       color: $grey-dark2-color;
     }
+
+    @include breakpoint(38em) {
+      width: 100%;
+    }
   }
 
   &__label {
@@ -50,13 +54,28 @@
 
   &__group-check {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 90%;
     @include mb-medium;
+
+    @include breakpoint(38em) {
+      width: 100%;
+      @include mb-small;
+    }
+  }
+
+  &__radio-group {
+    @include breakpoint(63em) {
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {
     position: relative;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
     padding-left: 5rem;
     cursor: pointer;
   }

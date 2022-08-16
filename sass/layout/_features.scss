@@ -18,5 +18,10 @@
   &__items {
     @include flex-center;
     @include gap-big;
+
+    @include breakpoint(63em) {
+      flex-wrap: wrap;
+      @include gap-medium;
+    }
   }
 }

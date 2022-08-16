@@ -1,0 +1,19 @@
+/*  QUERIES MANAGER
+  0 - 600 Phone
+  600 - 900 Tablet portrait
+  900 - 1200 Tablet landscape
+  1200 - 1800 Normal styles
+  1800 + Big screens
+*/
+
+/*
+1em = 16px
+600px - 38em phone
+1000px - 63em tab-port
+1200px - 75em tab-lands
+*/
+@mixin breakpoint($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}

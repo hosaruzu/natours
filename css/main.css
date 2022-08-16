@@ -1,7 +1,29 @@
-/* abstractions */
+/* abstractions */ /*  QUERIES MANAGER
+  0 - 600 Phone
+  600 - 900 Tablet portrait
+  900 - 1200 Tablet landscape
+  1200 - 1800 Normal styles
+  1800 + Big screens
+*/
+/*
+1em = 16px
+600px - 38em phone
+1000px - 63em tab-port
+1200px - 75em tab-lands
+*/
 /* base */
 :root {
   font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  :root {
+    font-size: 56%;
+  }
+}
+@media (max-width: 63em) {
+  :root {
+    font-size: 50%;
+  }
 }
 
 html {
@@ -23,6 +45,11 @@ body {
   font-size: 1.6rem;
   font-family: Lato, sans-serif;
   line-height: 1.7;
+}
+@media (max-width: 63em) {
+  body {
+    padding: 0;
+  }
 }
 
 @-webkit-keyframes moveInLeft {
@@ -199,6 +226,12 @@ body {
   -webkit-animation: moveInLeft 1s ease-out;
           animation: moveInLeft 1s ease-out;
 }
+@media (max-width: 38em) {
+  .heading-primary__main {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+}
 .heading-primary__sub {
   display: block;
   font-weight: 700;
@@ -206,6 +239,11 @@ body {
   letter-spacing: 1.75rem;
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
+}
+@media (max-width: 38em) {
+  .heading-primary__sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -224,10 +262,19 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: skewX(15deg) skewY(7deg) scale(1.1);
 }
+@media (max-width: 63em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 38em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
 
 .heading-tertiary {
   font-weight: 700;
-  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -238,6 +285,19 @@ body {
 .composition {
   position: relative;
   width: 100%;
+}
+@media (max-width: 63em) {
+  .composition {
+    order: -1;
+    width: 50%;
+    margin-bottom: 35rem;
+  }
+}
+@media (max-width: 38em) {
+  .composition {
+    width: 50%;
+    margin-bottom: 20rem;
+  }
 }
 .composition__photo {
   position: absolute;
@@ -278,6 +338,17 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-out;
+}
+@media (max-width: 63em) {
+  .feature {
+    max-width: 35%;
+  }
+}
+@media (max-width: 38em) {
+  .feature {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .feature__heading {
   margin-bottom: 1.5rem;
@@ -427,8 +498,26 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   transform: skewX(-12deg);
 }
+@media (max-width: 63em) {
+  .story {
+    width: 70%;
+    padding: 5rem;
+    padding-left: 10rem;
+  }
+}
+@media (max-width: 38em) {
+  .story {
+    padding-left: 6rem;
+    transform: skewX(-3deg);
+  }
+}
 .story > * {
   transform: skewX(12deg);
+}
+@media (max-width: 38em) {
+  .story > * {
+    transform: skewX(3deg);
+  }
 }
 .story__heading {
   margin-bottom: 1.5rem;
@@ -443,6 +532,16 @@ body {
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
+}
+@media (max-width: 38em) {
+  .story__shape {
+    float: none;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    transform: translateX(-3rem) skewX(3deg);
+  }
 }
 .story__image {
   width: 100%;
@@ -510,6 +609,11 @@ body {
 .form__input::placeholder {
   color: #999;
 }
+@media (max-width: 38em) {
+  .form__input {
+    width: 100%;
+  }
+}
 .form__label {
   display: block;
   margin-top: 0.7rem;
@@ -537,12 +641,27 @@ body {
 }
 .form__group-check {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 90%;
   margin-bottom: 4rem;
 }
+@media (max-width: 38em) {
+  .form__group-check {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 63em) {
+  .form__radio-group {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 .form__radio-label {
   position: relative;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
   padding-left: 5rem;
   cursor: pointer;
 }
@@ -698,6 +817,11 @@ body {
   padding: 30rem 0;
   background-color: #f7f7f7;
 }
+@media (max-width: 63em) {
+  .about {
+    padding: 25rem 0;
+  }
+}
 .about__heading {
   margin-bottom: 8rem;
 }
@@ -708,6 +832,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 4rem;
+}
+@media (max-width: 63em) {
+  .about__content {
+    flex-wrap: wrap;
+  }
 }
 
 .features {
@@ -726,6 +855,12 @@ body {
   justify-content: center;
   gap: 8rem;
 }
+@media (max-width: 63em) {
+  .features__items {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+}
 
 .tours {
   margin-top: -20vh;
@@ -740,6 +875,11 @@ body {
   justify-content: center;
   gap: 4rem;
   margin-bottom: 8rem;
+}
+@media (max-width: 63em) {
+  .tours__content {
+    flex-wrap: wrap;
+  }
 }
 
 .stories {
@@ -786,13 +926,29 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, transparent 50%), url("../img/nat-10.jpg");
+  background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 63em) {
+  .book {
+    background-size: cover;
+  }
+}
+@media (max-width: 38em) {
+  .book {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), url("../img/nat-10.jpg");
+  }
+}
 .book__form {
   width: 50%;
   padding: 4rem;
+}
+@media (max-width: 38em) {
+  .book__form {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -814,17 +970,37 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 63em) {
+  .footer__bottom {
+    flex-wrap: wrap;
+  }
+}
 .footer__text {
   width: 40%;
+}
+@media (max-width: 63em) {
+  .footer__text {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 .footer__nav, .footer__copyright {
   padding-top: 2rem;
   border-top: 2px solid #777;
 }
+.footer__nav {
+  border: none;
+}
 .footer__list {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+@media (max-width: 63em) {
+  .footer__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .footer__link:link, .footer__link:visited {
   display: inline-block;

@@ -2,6 +2,9 @@
   margin-top: -20vh;
   padding: 30rem 0;
   background-color: $grey-1-color;
+  @include breakpoint(63em) {
+    padding: 25rem 0;
+  }
 
   &__heading {
     @include mb-big;
@@ -14,5 +17,9 @@
   &__content {
     @include flex-center;
     @include gap-medium;
+
+    @include breakpoint(63em) {
+      flex-wrap: wrap;
+    }
   }
 }
