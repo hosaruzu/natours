@@ -80,18 +80,24 @@
             <div class="about__composition composition">
               <img
                 class="composition__photo composition__photo--p1"
-                src="img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56em) 20vw, (max-width: 38em) 30vw, 300px"
                 alt="Nature photo 1"
+                src="img/nat-1-large.jpg"
               />
               <img
                 class="composition__photo composition__photo--p2"
-                src="img/nat-2-large.jpg"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56em) 20vw, (max-width: 38em) 30vw, 300px"
                 alt="Nature photo 2"
+                src="img/nat-2-large.jpg"
               />
               <img
                 class="composition__photo composition__photo--p3"
-                src="img/nat-3-large.jpg"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56em) 20vw, (max-width: 38em) 30vw, 300px"
                 alt="Nature photo 3"
+                src="img/nat-2-large.jpg"
               />
             </div>
           </div>
@@ -516,7 +522,17 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
-          <img class="footer__logo" src="img/logo-green-2x.png" alt="Full logo" />
+          <picture class="footer__logo">
+            <source
+              srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+              media="(max-width: 38em)"
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full logo"
+              src="img/logo-green-2x.png"
+            />
+          </picture>
         </div>
         <div class="footer__bottom">
           <nav class="footer__nav">
@@ -556,8 +572,10 @@
         </div>
         <div class="popup__right">
           <a href="#tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary">Start booking now</h2>
-          <h3 class="heading-tertiary">Important &ndash; Please read these terms before booking</h3>
+          <h2 class="heading-secondary popup__heading">Start booking now</h2>
+          <h3 class="heading-tertiary popup__subheading">
+            Important &ndash; Please read these terms before booking
+          </h3>
           <p class="popup__text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi sed obcaecati, nisi
             beatae reprehenderit blanditiis aspernatur sequi quam quibusdam, animi vitae. Ratione

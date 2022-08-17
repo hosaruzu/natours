@@ -3,6 +3,9 @@
   z-index: 1;
   padding: 20rem 0;
   background-color: $grey-1-color;
+  @include breakpoint(63em) {
+    padding: 5rem 0;
+  }
 
   &__wrapper {
     @include mb-big;

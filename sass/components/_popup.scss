@@ -32,6 +32,11 @@
     opacity: 0;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     transition-delay: 0.2s;
+
+    @include breakpoint(63em) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -45,6 +50,18 @@
     gap: 2rem;
     justify-content: center;
     padding: 2rem 5rem;
+
+    @include breakpoint(63em) {
+      padding: 2rem;
+    }
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+  }
+
+  &__subheading {
+    font-size: 1.6rem;
   }
 
   &__image {
@@ -54,16 +71,33 @@
     object-fit: cover;
   }
 
+  &__image:last-child {
+    @include breakpoint(63em) {
+      display: none;
+    }
+  }
+
   &__text {
     font-size: 1.4rem;
     hyphens: auto;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $grey-2-color;
+
+    @include breakpoint(63em) {
+      height: 10rem;
+      overflow-y: scroll;
+      column-count: auto;
+      column-gap: 2rem;
+    }
   }
 
   &__btn {
     align-self: flex-start;
+
+    @include breakpoint(63em) {
+      padding: 1.5rem 2rem;
+    }
   }
 
   &:target &__content {

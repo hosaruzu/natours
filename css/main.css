@@ -289,14 +289,12 @@ body {
 @media (max-width: 63em) {
   .composition {
     order: -1;
-    width: 50%;
-    margin-bottom: 35rem;
+    margin-bottom: 55rem;
   }
 }
 @media (max-width: 38em) {
   .composition {
-    width: 50%;
-    margin-bottom: 20rem;
+    margin-bottom: 30rem;
   }
 }
 .composition__photo {
@@ -501,14 +499,14 @@ body {
 @media (max-width: 63em) {
   .story {
     width: 70%;
-    padding: 5rem;
-    padding-left: 10rem;
+    padding: 3rem;
+    padding-left: 9rem;
   }
 }
 @media (max-width: 38em) {
   .story {
-    padding-left: 6rem;
-    transform: skewX(-3deg);
+    padding-left: 3rem;
+    transform: skewX(0);
   }
 }
 .story > * {
@@ -516,11 +514,16 @@ body {
 }
 @media (max-width: 38em) {
   .story > * {
-    transform: skewX(3deg);
+    transform: skewX(0);
   }
 }
 .story__heading {
   margin-bottom: 1.5rem;
+}
+@media (max-width: 38em) {
+  .story__heading {
+    font-size: 1.6rem;
+  }
 }
 .story__shape {
   position: relative;
@@ -535,12 +538,11 @@ body {
 }
 @media (max-width: 38em) {
   .story__shape {
-    float: none;
-    width: 10rem;
-    height: 10rem;
-    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
     margin-bottom: 1rem;
-    transform: translateX(-3rem) skewX(3deg);
+    margin-left: 3rem;
+    transform: translateX(-3rem) skewX(0);
   }
 }
 .story__image {
@@ -731,6 +733,12 @@ body {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   transition-delay: 0.2s;
 }
+@media (max-width: 63em) {
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .popup__left {
   display: flex;
   flex-direction: column;
@@ -742,12 +750,28 @@ body {
   justify-content: center;
   padding: 2rem 5rem;
 }
+@media (max-width: 63em) {
+  .popup__right {
+    padding: 2rem;
+  }
+}
+.popup__heading {
+  font-size: 1.8rem;
+}
+.popup__subheading {
+  font-size: 1.6rem;
+}
 .popup__image {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 63em) {
+  .popup__image:last-child {
+    display: none;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -761,8 +785,23 @@ body {
   -moz-column-rule: 1px solid #eee;
        column-rule: 1px solid #eee;
 }
+@media (max-width: 63em) {
+  .popup__text {
+    height: 10rem;
+    overflow-y: scroll;
+    -moz-column-count: auto;
+         column-count: auto;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
 .popup__btn {
   align-self: flex-start;
+}
+@media (max-width: 63em) {
+  .popup__btn {
+    padding: 1.5rem 2rem;
+  }
 }
 .popup:target .popup__content {
   transform: scale(1);
@@ -787,11 +826,16 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-position: top;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 38em), (min-resolution: 192dpi) and (min-width: 38em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  }
 }
 .header__logo-box {
   position: absolute;
@@ -816,11 +860,6 @@ body {
   margin-top: -20vh;
   padding: 30rem 0;
   background-color: #f7f7f7;
-}
-@media (max-width: 63em) {
-  .about {
-    padding: 25rem 0;
-  }
 }
 .about__heading {
   margin-bottom: 8rem;
@@ -887,6 +926,11 @@ body {
   z-index: 1;
   padding: 20rem 0;
   background-color: #f7f7f7;
+}
+@media (max-width: 63em) {
+  .stories {
+    padding: 5rem 0;
+  }
 }
 .stories__wrapper {
   margin-bottom: 8rem;
@@ -1034,6 +1078,12 @@ body {
   border-radius: 50%;
   transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
 }
+@media (max-width: 63em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+}
 .navigation__button {
   position: fixed;
   top: 6rem;
@@ -1048,6 +1098,12 @@ body {
   border-radius: 50%;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+@media (max-width: 63em) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
 }
 .navigation__icon {
   position: relative;

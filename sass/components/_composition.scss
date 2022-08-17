@@ -3,13 +3,11 @@
   width: 100%;
   @include breakpoint(63em) {
     order: -1;
-    width: 50%;
-    margin-bottom: 35rem;
+    margin-bottom: 55rem;
   }
 
   @include breakpoint(38em) {
-    width: 50%;
-    margin-bottom: 20rem;
+    margin-bottom: 30rem;
   }
 
   &__photo {
