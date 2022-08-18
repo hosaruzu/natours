@@ -57,11 +57,15 @@
   }
 
   &__heading {
-    font-size: 1.8rem;
+    @include breakpoint(63em) {
+      font-size: 1.8rem;
+    }
   }
 
   &__subheading {
-    font-size: 1.6rem;
+    @include breakpoint(63em) {
+      font-size: 1.6rem;
+    }
   }
 
   &__image {

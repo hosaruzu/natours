@@ -52,6 +52,16 @@ body {
   }
 }
 
+::-moz-selection {
+  color: #fff;
+  background-color: #55c57a;
+}
+
+::selection {
+  color: #fff;
+  background-color: #55c57a;
+}
+
 @-webkit-keyframes moveInLeft {
   0% {
     transform: translateX(-10rem);
@@ -755,11 +765,15 @@ body {
     padding: 2rem;
   }
 }
-.popup__heading {
-  font-size: 1.8rem;
+@media (max-width: 63em) {
+  .popup__heading {
+    font-size: 1.8rem;
+  }
 }
-.popup__subheading {
-  font-size: 1.6rem;
+@media (max-width: 63em) {
+  .popup__subheading {
+    font-size: 1.6rem;
+  }
 }
 .popup__image {
   display: block;
